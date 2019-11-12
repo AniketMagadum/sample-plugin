@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: fytinnovations.jobmanager::lang.job_types.name
+        span: left
+        comment: fytinnovations.jobmanager::lang.job_types.name_comment
+    slug:
+        label: fytinnovations.jobmanager::lang.job_types.slug
+        preset: name
+        span: right
+        comment: fytinnovations.jobmanager::lang.job_types.slug_comment
+    description:
+        label : fytinnovations.jobmanager::lang.job_types.description
+        type: textarea
+        span: full
+        comment: fytinnovations.jobmanager::lang.job_types.description_comment
+        size: small
+

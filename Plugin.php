@@ -21,8 +21,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'JobManager',
-            'description' => 'No description provided yet...',
+            'name'        => 'fytinnovations.jobmanager::lang.plugin.name',
+            'description' => 'fytinnovations.jobmanager::lang.plugin.description',
             'author'      => 'Fytinnovations',
             'icon'        => 'icon-leaf'
         ];
@@ -69,12 +69,10 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
-            'fytinnovations.jobmanager.some_permission' => [
-                'tab' => 'JobManager',
-                'label' => 'Some permission'
+            'fytinnovations.jobmanager.manage_job_types' => [
+                'tab' => 'fytinnovations.jobmanager::lang.plugin.tab',
+                'label' => 'fytinnovations.jobmanager::lang.plugin.manage_job_types'
             ],
         ];
     }
@@ -86,15 +84,21 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
-
         return [
             'jobmanager' => [
-                'label'       => 'JobManager',
-                'url'         => Backend::url('fytinnovations/jobmanager/mycontroller'),
-                'icon'        => 'icon-leaf',
-                'permissions' => ['fytinnovations.jobmanager.*'],
+                'label'       => 'fytinnovations.jobmanager::lang.plugin.name',
+                'url'         => Backend::url('fytinnovations/jobmanager/jobtypes'),
+                'icon'        => 'icon-briefcase',
+                'permissions' => ['fytinnovations.jobmanager.manage_job_types'],
                 'order'       => 500,
+                'sideMenu' => [
+                    'job_types' => [
+                        'label'       => 'fytinnovations.jobmanager::lang.job_types.menu_label',
+                        'icon'        => 'icon-list',
+                        'url'         => Backend::url('fytinnovations/jobmanager/jobtypes'),
+                        'permissions' => ['fytinnovations.jobmanager.manage_job_types']
+                    ]
+                ]
             ],
         ];
     }

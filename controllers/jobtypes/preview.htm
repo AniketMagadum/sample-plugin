@@ -1,0 +1,19 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('fytinnovations/jobmanager/jobtypes') ?>">Job Types</a></li>
+        <li><?= e(trans($this->pageTitle)) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <div class="form-preview">
+        <?= $this->formRenderPreview() ?>
+    </div>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
+    <p><a href="<?= Backend::url('fytinnovations/jobmanager/jobtypes') ?>" class="btn btn-default"><?= e(trans('fytinnovations.jobmanager::lang.job_types.return_to_job_types')) ?></a></p>
+
+<?php endif ?>
