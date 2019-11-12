@@ -1,0 +1,68 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    stretch: true
+    cssClass: text-blue
+    fields:
+        title:
+            label: fytinnovations.jobmanager::lang.jobs.title
+            span: auto
+            comment: fytinnovations.jobmanager::lang.jobs.title_comment
+            tab: Position
+        job_type:
+            label: fytinnovations.jobmanager::lang.jobs.job_type
+            span: auto
+            type: relation
+            tab: Position
+        job_description:
+            label : fytinnovations.jobmanager::lang.jobs.job_description
+            type: markdown
+            size: small
+            comment: fytinnovations.jobmanager::lang.jobs.job_description_comment
+            tab: Position
+        how_to_apply:
+            label : fytinnovations.jobmanager::lang.jobs.how_to_apply
+            type: markdown
+            size: small
+            comment: fytinnovations.jobmanager::lang.jobs.how_to_apply_comment
+            tab: Position
+        application_target:
+            label : fytinnovations.jobmanager::lang.jobs.application_target
+            type: text
+            comment: fytinnovations.jobmanager::lang.jobs.application_target_comment
+            placeholder: fytinnovations.jobmanager::lang.jobs.application_target_placeholder
+            tab: Position
+        currency:
+            label : fytinnovations.jobmanager::lang.jobs.currency
+            type: text
+            span: storm
+            cssClass: col-md-4
+            tab: Compensation
+        min_salary:
+            label : fytinnovations.jobmanager::lang.jobs.min_salary
+            type: text
+            span: storm
+            cssClass: col-md-4
+            tab: Compensation
+        max_salary:
+            label : fytinnovations.jobmanager::lang.jobs.max_salary
+            type: text
+            span: storm
+            cssClass: col-md-4
+            tab: Compensation
+        is_remote:
+            label : fytinnovations.jobmanager::lang.jobs.work_remotely
+            type: switch
+            tab: Location
+        address:
+            label: Address
+            type: addressfinder
+            tab: Location
+            trigger:
+                action: show
+                field: is_remote
+                condition: checked
+        
+

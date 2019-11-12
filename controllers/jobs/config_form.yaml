@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: fytinnovations.jobmanager::lang.jobs.record_name
+
+# Model Form Field configuration
+form: $/fytinnovations/jobmanager/models/job/fields.yaml
+
+# Model Class name
+modelClass: Fytinnovations\JobManager\Models\Job
+
+# Default redirect location
+defaultRedirect: fytinnovations/jobmanager/jobs
+
+# Create page
+create:
+    title: fytinnovations.jobmanager::lang.jobs.create_job_type
+    redirect: fytinnovations/jobmanager/jobs/update/:id
+    redirectClose: fytinnovations/jobmanager/jobs
+
+# Update page
+update:
+    title: fytinnovations.jobmanager::lang.jobs.edit_job_type
+    redirect: fytinnovations/jobmanager/jobs
+    redirectClose: fytinnovations/jobmanager/jobs
+
+# Preview page
+preview:
+    title: fytinnovations.jobmanager::lang.jobs.preview_job_type

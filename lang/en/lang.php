@@ -5,7 +5,8 @@ return [
         'name' => 'Job Manager',
         'description' => 'Convert your OctoberCMS Website into a Job Portal',
         'tab' => 'Job Manager',
-        'manage_job_types' => 'Manage Job Types'
+        'manage_job_types' => 'Manage Job Types',
+        'manage_jobs'=> "Manage Jobs"
     ],
     'job_types'=>[
         'menu_label' => "Job Types",
@@ -26,5 +27,36 @@ return [
         'name_comment'=> "The name is how it appears on your site.",
         'slug_comment' => "The slug is the URL-friendly version of the name and contains only letters, numbers, and hyphens.",
         'description_comment' =>"The description is not prominent by default"
-    ]
+    ],
+    'jobs'=>[
+        'menu_label' => "Jobs",
+        'new_job_type' => "New Job",
+        'delete_selected' => "Delete Selected",
+        'return_to_jobs' => "Return to Jobs",
+        'delete_confirmation' => "Are you sure you want to delete the selected Jobs?",
+        'record_name' => "Job",
+        'create_job_type' => "Create Job",
+        'edit_job_type' => "Edit Job",
+        'preview_job_type' => "Preview Job",
+        'list_title' => "Manage Jobs",
+        'delete_confirm' => "Are you sure you want to delete this Job?",
+        'title' => "Title",
+        'title_comment' => "Concise and clear, name the role. Omit location or job type.",
+        'job_type' => "Job Type",
+        'location' => "Location",
+        'slug' => "Slug",
+        'job_description' => "Job Description",
+        'job_description_comment' => "Describe the job as clear as possible",
+        'how_to_apply' => "How to apply",
+        'how_to_apply_comment' => "Describe how to apply to this position. Specify anything applicants should provide like portfolio, GitHub links, etc.",
+        'application_target' => "Application Target",
+        'application_target_comment' => "Send applications to this email address or provide the URL to an ATS:",
+        'application_target_placeholder' => "hr@example.com or https://example.com/careers",
+        'currency' => "Currency",
+        'currency_comment' => "Jobs that include salary are more likely to get clicks.",
+        'min_salary' => "Min Salary",
+        'max_salary' => "Max Salary",
+        'work_remotely' => "Work remotely",
+    ],
+    
 ];

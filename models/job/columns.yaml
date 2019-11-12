@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: fytinnovations.jobmanager::lang.jobs.title
+        searchable: true
+    job_type:
+        label: fytinnovations.jobmanager::lang.jobs.job_type
+        relation: job_type
+        select: name

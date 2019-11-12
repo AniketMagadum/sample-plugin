@@ -1,3 +1,4 @@
 1.0.1:
   - First version of JobManager
   - create_job_types_table.php
+  - create_jobs_table.php

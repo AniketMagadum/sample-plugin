@@ -74,6 +74,10 @@ class Plugin extends PluginBase
                 'tab' => 'fytinnovations.jobmanager::lang.plugin.tab',
                 'label' => 'fytinnovations.jobmanager::lang.plugin.manage_job_types'
             ],
+            'fytinnovations.jobmanager.manage_jobs' => [
+                'tab' => 'fytinnovations.jobmanager::lang.plugin.tab',
+                'label' => 'fytinnovations.jobmanager::lang.plugin.manage_jobs'
+            ],
         ];
     }
 
@@ -92,9 +96,15 @@ class Plugin extends PluginBase
                 'permissions' => ['fytinnovations.jobmanager.manage_job_types'],
                 'order'       => 500,
                 'sideMenu' => [
-                    'job_types' => [
+                    'jobs' => [
+                        'label'       => 'fytinnovations.jobmanager::lang.jobs.menu_label',
+                        'icon'        => 'icon-briefcase',
+                        'url'         => Backend::url('fytinnovations/jobmanager/jobs'),
+                        'permissions' => ['fytinnovations.jobmanager.manage_jobs']
+                    ],
+                    'jobtypes' => [
                         'label'       => 'fytinnovations.jobmanager::lang.job_types.menu_label',
-                        'icon'        => 'icon-list',
+                        'icon'        => 'icon-sitemap',
                         'url'         => Backend::url('fytinnovations/jobmanager/jobtypes'),
                         'permissions' => ['fytinnovations.jobmanager.manage_job_types']
                     ]
